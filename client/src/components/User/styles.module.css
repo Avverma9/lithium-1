@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table__thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table__th,
+  .table__td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #e1e1e1;
+  }
+  
+  .table__tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

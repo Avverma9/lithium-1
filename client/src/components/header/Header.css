@@ -6,7 +6,7 @@
   background-size: contain;
 }
 nav {
-  background-color: #1b0037;
+  background-color: #d0c6db;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -26,14 +26,17 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #bd9ce7;
-  font-weight: bold;
+  border-radius: 55px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 0 10px; /* Add 10px of padding on the left and right sides */
 }
 
+
 nav a:hover {
-  color: #68b3bd;
-  text-decoration: underline;
-  background-color: #8b7a7ad8;
+  color: #ffffff;
+
+  background-color: #000000d8;
   font-weight: bold;
   transition: all 0.7s ease-in-out;
 }
@@ -46,6 +49,7 @@ nav {
   align-items: center;
   padding: 20px;
   background-color: #13061beb;
+  margin-right : 10px;
 }
 
 
@@ -98,9 +102,9 @@ a {
   left: 0;
   width: 28%;
   padding: 10px;
-  background-color: #13061beb;
+  background-color: #33394beb;
   z-index: 1;
-  border: 1px solid #fff;
+  border: 1px solid #f1c6c6;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(237, 170, 170, 0.601); /* add a 5px black shadow */
 }

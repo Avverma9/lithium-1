@@ -11,11 +11,7 @@ const Header = () => {
 
   return (
     <nav>
-        <img
-          className="header__icon"
-          src="/logo.png"
-          alt="FilmyGyan Logo"
-        />
+      <img className="header__icon" src="/logo.png" alt="FilmyGyan Logo" />
 
       <div className={`menu-icon ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span></span>
@@ -25,37 +21,32 @@ const Header = () => {
 
       <ul className={`menu ${isOpen ? "open" : ""}`}>
         <li>
-        <Link to="/" onClick={toggleMenu} className="navItem">
+          <Link to="/" onClick={toggleMenu} className="navItem">
             Home
           </Link>
         </li>
         <li>
-        <Link to="/admin"  onClick={toggleMenu} >
-        Admin
+          <Link to="/about" onClick={toggleMenu}>
+            About
           </Link>
         </li>
         <li>
-        <Link to="/movies/popular" onClick={toggleMenu}>
-        Popular
+          <Link to="/admin" onClick={toggleMenu}>
+            Admin
           </Link>
         </li>
         <li>
-        <Link to="/movies/top_rated" onClick={toggleMenu}>
-        Most Ranked
-          </Link>
-        </li>
-        <li>
-        <Link to="/movies/upcoming" onClick={toggleMenu}>
-        Upcoming Movies
-          </Link>
-        </li>
-       
-        <li>
-        <a href="../Footer.jsx" onClick={toggleMenu}>
+          <a href="../Footer.jsx" onClick={toggleMenu}>
             Contact
           </a>
         </li>
       </ul>
+
+      <div className="header__links">
+        <Link to="/movies/popular">Popular</Link>
+        <Link to="/movies/top_rated">Most Ranked</Link>
+        <Link to="/movies/upcoming">Upcoming Movies</Link>
+      </div>
     </nav>
   );
 };
