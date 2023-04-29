@@ -1,10 +1,30 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import styles from "./styles.module.css";
+
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:3001/submit", {
+        email,
+        mobile,
+      });
+      console.log(response.data);
+      setEmail("");
+      setMobile("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div className= {styles.all}>
-      <footer>
+    <div className={styles.all}>
+      <footer className={styles.footer}>
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.logo_details}>
@@ -45,21 +65,7 @@ const Footer = () => {
                 <a href="/blog">Get started</a>
               </li>
             </ul>
-            <ul className={styles.box}>
-              <li className={styles.link_name}>Services</li>
-              <li>
-                <a href="/">App design</a>
-              </li>
-              <li>
-                <a href="/">Web design</a>
-              </li>
-              <li>
-                <a href="/">Logo design</a>
-              </li>
-              <li>
-                <a href="/">Banner design</a>
-              </li>
-            </ul>
+          
             <ul className={styles.box}>
               <li className={styles.link_name}>Account</li>
               <li>
@@ -75,46 +81,33 @@ const Footer = () => {
                 <a href="/">Purchase</a>
               </li>
             </ul>
-            <ul className={styles.box}>
-              <li className={styles.link_name}>Courses</li>
-              <li>
-                <a href="/">HTML & CSS</a>
-              </li>
-              <li>
-                <a href="/">JavaScript</a>
-              </li>
-              <li>
-                <a href="/">Photography</a>
-              </li>
-              <li>
-                <a href="/">Photoshop</a>
-              </li>
-            </ul>
-            <ul className={styles.input_box}>
-              <li className={styles.link_name}>Subscribe</li>
-              <li>
-                <input type="text" placeholder="Enter your email" />
-              </li>
-              <li>
-                <input type="button" value="Subscribe" />
-              </li>
-            </ul>
+           
           </div>
-        </div>
-        <div className={styles.bottom_details}>
-          <div className={styles.bottom_text}>
-            <span className={styles.copyright_text}>
-              Copyright © 2023 <a href="/">FilmyGyan.</a>All rights reserved
-            </span>
-            <span className={styles.policy_terms}>
-              <a href="/">Privacy policy</a>
-              <a href="/">Terms & condition</a>
-            </span>
+          <div className={styles.bottom}>
+            <form onSubmit={handleSubmit}>
+
+              <h3>Get in touch</h3>
+              <p>Enter Your Email and Number We will contact you soon !</p>
+              <div className={styles.inputs}>
+                <input
+                  type="email"
+                  placeholder="Enter email address"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+                <input
+                  type="tel"
+                  placeholder="Enter mobile number"
+                  value={mobile}
+                  onChange={(event) => setMobile(event.target.value)}
+                />
+              </div>
+              <button type="submit">Connect</button>
+            </form>
           </div>
         </div>
       </footer>
     </div>
   );
 };
-
-export default Footer;
+export default Footer;

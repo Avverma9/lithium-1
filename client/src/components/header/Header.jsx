@@ -13,18 +13,18 @@ const Header = () => {
       <div className="headerLeft">
         <img
           className="header__icon"
-          src="https://o.remove.bg/downloads/a7ddbe5c-40ef-4eaf-ad85-eaff5cb755a9/filmy-gyan-1645096309-removebg-preview.png"
+          src="/logo.png"
           alt="FilmyGyan Logo"
         />
         <Link to="/movies/popular" style={{ textDecoration: "none" }}>
-          <span>Famous</span>
+          <span>Popular</span>
         </Link>
 
         <Link to="/movies/top_rated" style={{ textDecoration: "none" }}>
-          <span>Rated</span>
+          <span>Most Ranked</span>
         </Link>
         <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-          <span>Upcoming Masala</span>
+          <span>Upcoming Movies</span>
         </Link>
       </div>
       <div className="headerRight">
@@ -38,9 +38,10 @@ const Header = () => {
    <Link to="/admin" style={{ textDecoration: "none" }}>
           <span>Admin</span>
         </Link>
-        <Link to="/admin" style={{ textDecoration: "none" }}>
-          <span>Contact Us</span>
-        </Link>
+        <a href="../Footer.jsx" style={{ textDecoration: "none" }}>
+  <span>Contact Us</span>
+</a>
+
    </div>
       </div>
     </div>

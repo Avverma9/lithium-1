@@ -5,8 +5,9 @@ import Header from './components/header/Header.jsx';
 import Home from './pages/home/home';
 import MovieList from './components/movieList/movieList';
 import Movie from './pages/movieDetail/movie';
-import Footer from './components/Footer.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import Admin from './components/Admin/Admin.jsx';
+import User from './components/User/User.jsx';
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
                 <Route index element={<Home />}></Route>
                 <Route path="movie/:id" element={<Movie />}></Route>
                 <Route path="movies/:type" element={<MovieList />}></Route>
-                <Route path="/components/Admin/Admin.jsx" element={<Admin />}></Route>
-                <Route path="/*" element={<h1>Error Page</h1>}></Route>
+                <Route path="/admin" element={<Admin />}></Route>
+                <Route path="/User" element={<User/>}></Route>
                 <Route path="/" element={<Footer />}>
                   
                 </Route>
