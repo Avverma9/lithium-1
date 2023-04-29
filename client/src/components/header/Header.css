@@ -5,6 +5,7 @@
  
   background-size: contain;
 }
+
 nav {
   background-color: #d0c6db;
   padding: 10px;
@@ -30,29 +31,27 @@ nav a {
   color: #ffffff;
   justify-content: center;
   padding: 0 10px; /* Add 10px of padding on the left and right sides */
+  font-family: Arial, sans-serif; /* Add font family */
+  font-size: 16px; /* Add font size */
 }
-
 
 nav a:hover {
   color: #ffffff;
-
   background-color: #000000d8;
   font-weight: bold;
   transition: all 0.7s ease-in-out;
 }
-
 
 /**/
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 100px;
   padding: 20px;
   background-color: #13061beb;
-  margin-right : 10px;
+  margin-right: 800px;
 }
-
-
 
 ul {
   display: flex;
@@ -69,12 +68,13 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  font-family: Arial, sans-serif; /* Add font family */
 }
 
 .menu-icon {
   cursor: pointer;
   display: inline-block;
-  margin-left: auto;
+  margin-left: -405px;
 }
 
 .menu-icon span {
@@ -109,11 +109,6 @@ a {
   box-shadow: 0 5px 10px rgba(237, 170, 170, 0.601); /* add a 5px black shadow */
 }
 
-
-
-
-
-
 .menu.open {
   display: flex;
 }
@@ -124,4 +119,5 @@ a {
 
 .menu a {
   font-size: 24px;
+  font-family: Arial, sans-serif; /* Add font family */
 }

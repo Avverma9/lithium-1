@@ -12,9 +12,12 @@ function Admin() {
   const handleLogin = async () => {
 	try {
 	  // Fetch the data from the API
+    console.log('inside onclicj jsx')
 	  const response = await axios.get("http://localhost:3001/get");
-  
-	  if (email === "admin@example.com" && password === "admin") {
+    const data  = response.data
+    localStorage.setItem('users' , JSON.stringify(data))
+
+    if (email === "admin@example.com" && password === "admin") {
 		
 		const user = { email: email, password: password };
 		navigate("/User", { state: { user } });
