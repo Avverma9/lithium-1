@@ -1,51 +1,63 @@
-/* eslint-disable jsx-a11y/alt-text */
-import React from "react"
-import "./Header.css"
-import { Link } from "react-router-dom"
-
-
-
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="header">
-      <div className="headerLeft">
+    <nav>
         <img
           className="header__icon"
           src="/logo.png"
           alt="FilmyGyan Logo"
         />
-        <Link to="/movies/popular" style={{ textDecoration: "none" }}>
-          <span>Popular</span>
-        </Link>
 
-        <Link to="/movies/top_rated" style={{ textDecoration: "none" }}>
-          <span>Most Ranked</span>
-        </Link>
-        <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-          <span>Upcoming Movies</span>
-        </Link>
+      <div className={`menu-icon ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div className="headerRight">
-        <form className="searchForm">
-          <input className="searchInput" type="text" placeholder="Search movies..." />
-          <button className="searchButton" type="submit">
-            Search
-          </button>
-        </form>
-   <div className="headerRight">
-   <Link to="/admin" style={{ textDecoration: "none" }}>
-          <span>Admin</span>
-        </Link>
-        <a href="../Footer.jsx" style={{ textDecoration: "none" }}>
-  <span>Contact Us</span>
-</a>
 
-   </div>
-      </div>
-    </div>
-  )
-}
+      <ul className={`menu ${isOpen ? "open" : ""}`}>
+        <li>
+        <Link to="/" onClick={toggleMenu} className="navItem">
+            Home
+          </Link>
+        </li>
+        <li>
+        <Link to="/admin"  onClick={toggleMenu} >
+        Admin
+          </Link>
+        </li>
+        <li>
+        <Link to="/movies/popular" onClick={toggleMenu}>
+        Popular
+          </Link>
+        </li>
+        <li>
+        <Link to="/movies/top_rated" onClick={toggleMenu}>
+        Most Ranked
+          </Link>
+        </li>
+        <li>
+        <Link to="/movies/upcoming" onClick={toggleMenu}>
+        Upcoming Movies
+          </Link>
+        </li>
+       
+        <li>
+        <a href="../Footer.jsx" onClick={toggleMenu}>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Header
+export default Header;

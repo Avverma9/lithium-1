@@ -2,9 +2,9 @@
     display: inline-block;
     transition: transform .2s;
     position: relative;
-    border-radius: 75px;
+    border-radius: 70px;
     overflow: hidden;
-    margin: 3rem; /* add margin here */
+    margin: 10px; /* add margin here */
     cursor: pointer;
     min-width: 200px;
     height: 300px;
