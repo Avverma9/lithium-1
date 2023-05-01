@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #0077b6;
+  padding: 10px 0;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.table__thead {
+  background-color: #f2f2f2;
+}
+
+.table__th,
+.table__td {
+  text-align: center;
+  padding: 10px;
+}
+
+.table__th {
+  font-weight: 600;
+  color: #0077b6;
+  font-size: 18px;
+}
+
+.table__tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table__tr:hover {
+  background-color: #e4f9f5;
+}
+
+.table__td {
+  color: #2d2d2d;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .table__td {
+    font-size: 14px;
+    max-width: 150px;
+  }
+}
+
+.btn {
+  background-color: #0077b6;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #023e8a;
+}
+
+.btn:active {
+  background-color: #03045e;
+}
+
+.btn--secondary {
+  background-color: #f2f2f2;
+  color: #2d2d2d;
+}
+
+.btn--secondary:hover {
+  background-color: #e4e4e4;
+}
+
+.btn--secondary:active {
+  background-color: #d9d9d9;
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid #0077b6;
+  color: #0077b6;
+}
+
+.btn--outline:hover {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.btn--outline:active {
+  background-color: #03045e;
+  border-color: #03045e;
+  color: #fff;
+}
+

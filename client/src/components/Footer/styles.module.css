@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.all {
+  margin: 0;
+  padding: 0;
+  background-color: #88a1d8;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  box-shadow: #0c0b0b;
+  color: #000000;
+  text-decoration: black;
+}
+
+footer {
+  max-width: 1200px;
+  margin-top: auto;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #0c0b0b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.logo_details {
+  display: flex;
+  align-items: center;
+}
+
+.logo_name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.media_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media_icons a i {
+  font-size: 24px;
+  color: #555;
+  margin-right: 20px;
+}
+
+.link_boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.box {
+  list-style-type: none;
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.box li {
+  margin-bottom: 10px;
+}
+
+.link_name {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.link_name:hover {
+  color: #3369df;
+}
+
+.bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="tel"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+input[type="email"] {
+  width: 200px;
+}
+
+input[type="tel"] {
+  width: 200px;
+}
+
+button[type="submit"] {
+  background-color: #3369df;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+/* Additional styles */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}

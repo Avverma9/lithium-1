@@ -1,0 +1,123 @@
+.header__icon {
+  display: block;
+  width: 100px; 
+  height: auto; 
+ 
+  background-size: contain;
+}
+
+nav {
+  background-color: #d0c6db;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  border-radius: 55px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 0 10px; /* Add 10px of padding on the left and right sides */
+  font-family: Arial, sans-serif; /* Add font family */
+  font-size: 16px; /* Add font size */
+}
+
+nav a:hover {
+  color: #ffffff;
+  background-color: #000000d8;
+  font-weight: bold;
+  transition: all 0.7s ease-in-out;
+}
+
+/**/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  padding: 20px;
+  background-color: #13061beb;
+  margin-right: 800px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Arial, sans-serif; /* Add font family */
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: -405px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 28%;
+  padding: 10px;
+  background-color: #33394beb;
+  z-index: 1;
+  border: 1px solid #f1c6c6;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(237, 170, 170, 0.601); /* add a 5px black shadow */
+}
+
+.menu.open {
+  display: flex;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  font-size: 24px;
+  font-family: Arial, sans-serif; /* Add font family */
+}
