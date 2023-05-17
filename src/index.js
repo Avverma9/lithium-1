@@ -83,5 +83,11 @@ app.get('/get', async (req, res) => {
   res.json(records);
 });
 
+app.get('/getall', async (req, res) => {
+  
+  const records = await signUp.find();
+  res.json(records);
+});
+
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
