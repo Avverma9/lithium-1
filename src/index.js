@@ -12,7 +12,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 const MONGO_URI = 'mongodb+srv://Avverma:Avverma95766@avverma.2g4orpk.mongodb.net/CarData';
 const AWS_BUCKET_NAME = 'classroom-training-bucket';
 const AWS_ACCESS_KEY_ID = 'AKIAY3L35MCRZNIRGT6N';
@@ -77,11 +77,27 @@ app.post('/signup', upload, async (req, res) => {
   res.json(user);
 });
 
-app.get('/get', async (req, res) => {
-  const data = req.query
-  const records = await signUp.find(data);
-  res.json(records);
+// Existing code...
+
+// GET endpoint to retrieve data by brand name
+app.get('/get/:model', async (req, res) => {
+  const {model} = req.params
+
+  try {
+    const filteredRecords = await signUp.find({ model});
+
+    if (filteredRecords.length === 0) {
+      return res.status(404).json({ message: 'No records found for the specified brand.' });
+    }
+
+    res.json(filteredRecords);
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error.' });
+  }
 });
+
+// Existing code...
+
 
 app.get('/getall', async (req, res) => {
   
